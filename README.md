@@ -1,48 +1,113 @@
-# Astro Starter Kit: Basics
+# Todo List App com Astro e Shadcn UI
 
-```sh
-npm create astro@latest -- --template basics
+Uma aplicação moderna de lista de tarefas construída com Astro, React e Shadcn UI, oferecendo funcionalidades CRUD completas e armazenamento local.
+
+## ✨ Características
+
+- ✅ CRUD completo (Criar, Ler, Atualizar, Deletar tarefas)
+- 🔍 Filtro de tarefas por status (Todas/Concluídas/Pendentes)
+- 🌓 Modo escuro/claro
+- 💾 Persistência de dados com localStorage
+- 📱 Design responsivo
+- 🧩 Componentes reutilizáveis com Shadcn UI
+
+## 🚀 Início Rápido
+
+Siga estas etapas para configurar o projeto em sua máquina local:
+
+### Pré-requisitos
+
+- Node.js (versão 16.x ou superior)
+- npm ou yarn
+
+### Instalação
+
+1. **Clone o repositório**
+
+```bash
+git clone https://github.com/oliver-zyn/astro-todolist.git
+cd todo-list-app
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+2. **Instale as dependências**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm install
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+3. **Inicie o servidor de desenvolvimento**
 
-## 🧞 Commands
+```bash
+npm run dev
+```
 
-All commands are run from the root of the project, from a terminal:
+4. **Abra a aplicação no navegador**
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Acesse `http://localhost:4321` para ver a aplicação em execução.
 
-## 👀 Want to learn more?
+## 📦 Dependências Principais
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- **Astro** - Framework web com arquitetura de ilhas
+- **React** - Biblioteca para construção de interfaces
+- **Tailwind CSS** - Framework CSS utilitário
+- **Shadcn UI** - Componentes de UI baseados em Radix UI
+- **Lucide React** - Ícones
+
+## 🛠️ Detalhes de Implementação
+
+### Estrutura do Projeto
+
+```
+src/
+├── components/           # Componentes React reutilizáveis
+│   ├── TodoApp.tsx       # Componente principal da aplicação
+│   ├── ThemeToggle.tsx   # Componente para alternar tema
+│   └── ui/               # Componentes da Shadcn UI
+├── layouts/
+│   └── Layout.astro      # Layout principal da aplicação
+└── pages/
+    └── index.astro       # Página inicial
+
+public/
+└── styles/
+    └── global.css        # Estilos globais e variáveis de tema
+```
+
+### Funcionalidades CRUD
+
+- **Create**: Adicionar novas tarefas com a entrada de texto e botão "Adicionar"
+- **Read**: Visualizar tarefas com filtragem por status
+- **Update**: Editar tarefas existentes através do botão de edição
+- **Delete**: Remover tarefas com confirmação de exclusão
+
+## 🔧 Personalização
+
+### Modificar Temas
+
+Você pode personalizar as cores do tema editando as variáveis CSS em `public/styles/global.css`:
+
+```css
+:root {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  /* ... outras variáveis ... */
+}
+
+.dark {
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  /* ... outras variáveis ... */
+}
+```
+
+## 🏗️ Build para Produção
+
+Para criar uma versão otimizada para produção:
+
+```bash
+npm run build
+```
+
+Os arquivos de saída serão gerados na pasta `dist/`, prontos para serem implantados em qualquer hospedagem estática.
+
+---
