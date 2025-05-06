@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TodoApp from "../components/TodoApp";
+---
+
+<Layout title="Todo List App">
+  <main class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8 text-center">Lista de Tarefas</h1>
+    <TodoApp client:load />
+  </main>
+</Layout>
