@@ -26,7 +26,7 @@ Siga estas etapas para configurar o projeto em sua máquina local:
 
 ```bash
 git clone https://github.com/oliver-zyn/astro-todolist.git
-cd todo-list-app
+cd astro-todolist
 ```
 
 2. **Instale as dependências**
